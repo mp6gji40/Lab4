@@ -6,7 +6,15 @@
 </script>
 <script>
 $(document).ready(function(){
-  
+  $(".click1").click(function(){
+      $(".test1").toggle();
+  });
+  $(".click2").click(function(){
+    $(".test2").toggle();
+  });
+  $(".click3").click(function(){
+    $(".test3").toggle();
+  });
 });
 </script>
 <style type="text/css">
@@ -17,6 +25,15 @@ $(document).ready(function(){
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  #subtitle{
+      font-family: DFKai-SB;
+      font-size: 2px;
+  }
+  .container{
+    width: 100%;
+    height: 200px;
+    display: table;
+  }
   .list{
     font-family: PMingLiU;
     font-size: 20px;
@@ -25,22 +42,49 @@ $(document).ready(function(){
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .word{
-    color: #00FFFF;
-      font-family: fantasy;
-      font-size: 50px;
+  .recommend{
+    font-family: PMingLiU;
+    font-size: 25px;
+    text-align: center;
+    display: none;
+    background: -webkit-linear-gradient(left, #C71585, #7400A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+  .photo{
+    vertical-height: moddle;
+  }
+
 </style>
   </head>
   <body background="https://i.imgur.com/LJlEIeW.jpg" style="background-repeat:no-repeat;background-size:cover;opacity:0.5">
-      <h1 id=animate align="center">動漫推薦</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <h2 class="list">魔王學院的不適任者～史上最強的魔王始祖，轉生就讀子孫們的學校～</h2>
-          <img src="https://i.imgur.com/CitUYHc.jpg" class="img-responsive" text-align: center>
+      <h1 id="animate" align="center">動漫推薦</h1>
+      <h2 id="subtitle" align="center">點擊圖片查看介紹</h2>
+      <div class="list">魔王學院的不適任者～史上最強的魔王始祖，轉生就讀子孫們的學校～</div>
+      <div class="row container">
+        <div class="col-xs-7" style="height:350px">
+          <img src="https://i.imgur.com/CitUYHc.jpg" class="img-responsive click1" style="display:block; margin:auto; photo">
         </div>
-        <div class="col-md-6">
-          <h3 vertical-align: center>史上</h3>
+        <div class="col-xs-5">
+          <div class="recommend test1">史上最強龍傲天，看魔王玩爆後代</div>
+        </div>
+      </div>
+      <div class="list">在地下城尋求邂逅是否搞錯了什麼</div>
+      <div class="row">
+        <div class="col-xs-7" style="height:350px">
+          <img src="https://imgur.com/Y4WPzg4.jpg" class="img-responsive click2" style="display:block; margin:auto; photo">
+        </div>
+        <div class="col-xs-5">
+          <div class="recommend test2">追趕憧憬的同時，也遭遇了許多美好的邂逅</div>
+        </div>
+      </div>
+      <div class="list">青春豬頭少年</div>
+      <div class="row">
+        <div class="col-xs-7" style="height:350px">
+          <img src="https://i.imgur.com/5fTZf7M.jpg" class="img-responsive click3" style="display:block; margin:auto; photo">
+        </div>
+        <div class="col-xs-5">
+          <div class="recommend test3">既燒腦又胃痛的感人大作</div>
         </div>
       </div>
     
